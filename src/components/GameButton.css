@@ -1,0 +1,97 @@
+.gameButtonDiv {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100%;
+  border-radius: 50%;
+  height: 126px;
+  aspect-ratio: 1 / 1;
+}
+.gameButtonDivRock {
+  /* background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    hsl(349, 89%, 14%) 78.66662740707397%,
+    hsl(349, 71%, 52%) 89.16662335395813%,
+    hsl(349, 89%, 14%) 100%
+  );*/
+
+  background-image: linear-gradient(
+    150deg,
+    hsl(349, 100%, 72%),
+    hsl(349, 71%, 52%)
+  );
+  box-shadow: 0px 6px 0px hsl(349, 70%, 40%);
+}
+.gameButtonDivScissors {
+  /* background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    hsl(39, 89%, 14%) 78.66662740707397%,
+    hsl(39, 89%, 49%) 89.16662335395813%,
+    hsl(39, 89%, 14%) 100%
+  );*/
+  background-image: linear-gradient(
+    150deg,
+    hsl(40, 99%, 68%),
+    hsl(40, 87%, 50%)
+  );
+  box-shadow: 0px 6px 0px hsl(40, 86%, 40%);
+}
+.gameButtonDivPaper {
+  /* background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    hsl(230, 89%, 14%) 78.66662740707397%,
+    hsl(230, 89%, 62%) 89.16662335395813%,
+    hsl(230, 89%, 14%) 100%
+  );*/
+
+  background-image: linear-gradient(
+    150deg,
+    hsl(230, 100%, 74%),
+    hsl(230, 89%, 62%)
+  );
+  box-shadow: 0px 6px 0px hsl(230, 64%, 45%);
+}
+.gameButton {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: inset 2px 4px 2px hsl(0, 0%, 76%),
+    inset -2px -2px 3px hsl(0, 0%, 100%),
+    inset -2px -12px 10px hsla(0, 0%, 50%, 0.5),
+    inset -2px -14px 14px hsla(0, 0%, 100%, 0.2);
+}
+.gameButton:hover {
+  filter: contrast(115%);
+}
+.gameButtonRock {
+  background-image: url("../assets/icon-rock.svg");
+}
+.gameButtonScissors {
+  background-image: url("../assets/icon-scissors.svg");
+}
+.gameButtonPaper {
+  background-image: url("../assets/icon-paper.svg");
+}
+
+.gameButton::after {
+  position: absolute;
+  bottom: 50px;
+  margin-left: -40px;
+
+  content: "";
+  height: 55px;
+  width: 60px;
+
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    hsl(0, 0%, 100%, 25%) 10%,
+    hsla(0, 0%, 100%, 0%) 80%
+  );
+}

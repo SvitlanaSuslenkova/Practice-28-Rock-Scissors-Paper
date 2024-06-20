@@ -1,0 +1,36 @@
+body {
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  display: grid;
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600; /*100-900 use 600, 800*/
+  font-style: normal;
+}
+
+h1 {
+  color: var(--score-bg-and-h1);
+  text-transform: uppercase;
+  font-size: clamp(18px, 5vw, 40px);
+  line-height: 80%;
+}
+
+@media only screen and (min-width: 500px) {
+  .custom-cursor {
+    position: fixed;
+    background-image: url("./assets/hammer2.png");
+    width: 70px;
+    height: 64px;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+    z-index: 9999;
+  }
+  .custom-cursor.rotated {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}

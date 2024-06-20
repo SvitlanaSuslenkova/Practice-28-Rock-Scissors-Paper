@@ -1,0 +1,93 @@
+.game-container-stageThree {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0px;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  align-items: center;
+}
+.textPicked {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: clamp(30px, 8vw, 88px);
+}
+.playAgainButton {
+  display: block;
+  margin-inline: auto;
+  width: 180px;
+  padding: 8px;
+  color: var(--dark-text);
+  background-color: var(--score-bg-and-h1);
+  text-align: center;
+  font-size: clamp(14px, 4vw, 20px);
+  border-radius: 0.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 0;
+  margin-top: clamp(30px, 8vw, 48px);
+}
+
+.playAgainButton:hover {
+  background-color: var(--dark-text);
+  border: 1px solid var(--dark-text);
+  color: var(--score-bg-and-h1);
+}
+.resultText {
+  text-align: center;
+  color: var(--score-bg-and-h1);
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.looserDiv {
+  position: relative;
+  margin-left: -187.5px;
+  z-index: -1;
+  height: 126px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  /*box-shadow: 0px 0px 0px 69px hsl(50, 67%, 96%, 5%),
+    0px 0px 0px 48px hsl(50, 67%, 96%, 10%),
+    0px 0px 0px 24px hsl(50, 67%, 96%, 15%);*/
+  /* transition: box-shadow 0.3s ease-in-out;
+  -webkit-transition: box-shadow 2s ease-in-out;*/
+  animation: winnerAnimation 0.5s ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 5;
+  box-shadow: 0px 3px 0px 69px hsl(50, 67%, 96%, 3%),
+    0px 3px 0px 46px hsl(50, 67%, 96%, 3%),
+    0px 3px 0px 23px hsl(50, 67%, 96%, 3%);
+}
+.winnerDiv {
+  position: relative;
+  margin-left: -562.5px;
+
+  z-index: -1;
+  height: 126px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0px 69px hsl(50, 67%, 96%, 3%),
+    0px 3px 0px 46px hsl(50, 67%, 96%, 3%),
+    0px 3px 0px 23px hsl(50, 67%, 96%, 3%);
+  animation: winnerAnimation 0.5s ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 5;
+}
+@keyframes winnerAnimation {
+  0% {
+    box-shadow: 0px 3px 0px 0px hsl(50, 67%, 96%, 3%),
+      0px 3px 0px 0px hsl(50, 67%, 96%, 3%),
+      0px 3px 0px 0px hsl(50, 67%, 96%, 3%);
+  }
+
+  100% {
+    box-shadow: 0px 3px 0px 69px hsl(50, 67%, 96%, 3%),
+      0px 3px 0px 46px hsl(50, 67%, 96%, 3%),
+      0px 3px 0px 23px hsl(50, 67%, 96%, 3%);
+  }
+}

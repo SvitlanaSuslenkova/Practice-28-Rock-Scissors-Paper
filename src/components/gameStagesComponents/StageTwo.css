@@ -1,0 +1,21 @@
+.game-container-stageTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  align-items: center;
+}
+.pickedText {
+  color: var(--score-bg-and-h1);
+  text-transform: uppercase;
+  font-size: clamp(12px, 3vw, 18px);
+  margin-top: 24px;
+  letter-spacing: 1px;
+}
+.emptyComputerChoice {
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: hsl(219, 50%, 16%);
+}

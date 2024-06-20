@@ -1,0 +1,19 @@
+.game-container {
+  display: grid;
+
+  grid-template-areas:
+    "a b"
+    "c c";
+  justify-items: center;
+  column-gap: 50px;
+  row-gap: 16px;
+  justify-content: center;
+  background-image: url("/src/assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 180px auto;
+  margin-top: 48px;
+}
+.rockButtonDiv {
+  grid-area: c;
+}
