@@ -9,11 +9,11 @@ function Header({
 }: {
   gameResult: Result | undefined;
   gameScore: number;
-  setGameScore: (gameScore: number) => void;
+  setGameScore: (gameScore: number | ((prevScore: number) => number)) => void;
 }) {
   useEffect(() => {
     if (gameResult !== undefined) {
-      setGameScore((prevScore) => {
+      setGameScore((prevScore: number) => {
         if (gameResult === Result.win) {
           return prevScore + 1;
         } else if (gameResult === Result.loose) {
