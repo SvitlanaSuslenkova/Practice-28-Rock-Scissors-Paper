@@ -17,11 +17,15 @@ h1 {
   font-size: clamp(18px, 5vw, 40px);
   line-height: 80%;
 }
+*,
+body {
+  cursor: none;
+}
 
 @media only screen and (min-width: 500px) {
   .custom-cursor {
     position: fixed;
-    background-image: url("./assets/hammer2.png");
+    background-image: url("./assets/hammer2rotate.png");
     width: 70px;
     height: 64px;
     background-repeat: no-repeat;
@@ -31,6 +35,7 @@ h1 {
     z-index: 9999;
   }
   .custom-cursor.rotated {
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+    cursor: none;
   }
 }
