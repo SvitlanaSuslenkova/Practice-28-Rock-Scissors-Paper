@@ -21,7 +21,7 @@
   color: var(--dark-text);
   background-color: var(--score-bg-and-h1);
   text-align: center;
-  font-size: clamp(14px, 4vw, 20px);
+  font-size: clamp(14px, 4vw, 16px);
   border-radius: 0.5em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -89,5 +89,30 @@
     box-shadow: 0px 3px 0px 69px hsl(50, 67%, 96%, 3%),
       0px 3px 0px 46px hsl(50, 67%, 96%, 3%),
       0px 3px 0px 23px hsl(50, 67%, 96%, 3%);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .game-container-stageThree {
+    grid-template-columns: 450px 450px 0px;
+  }
+  .textPicked {
+    display: grid;
+    grid-template-columns: 450px 450px;
+  }
+  .looserDiv {
+    position: relative;
+    margin-left: -450px;
+  }
+  .winnerDiv {
+    position: relative;
+    margin-left: -1350px;
+  }
+  .resultText {
+    margin-top: -260px;
+    margin-bottom: 16px;
+  }
+  .playAgainButton {
+    margin-top: 0;
   }
 }
